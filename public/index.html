@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8">
+    <meta name="robot" content="index, follow">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <h1 align="center">Tic Tac Toe</h1>
+    
+    <div id="lobby">
+        <input type="text" id="player" placeholder="Your Name">
+        <button onclick="createSession()">Create Session</button>
+        <button onclick="joinSession()">Join Session</button>
+        <div id="waitingMsg" style="display: none;">Waiting for opponent...</div>
+        <div id="sessionList" style="display: none;">
+            <h3>Available Sessions:</h3>
+            <ul id="sessionListItems"></ul>
+        </div>
+    </div>
+    
+    <div id="game" style="display: none;">
+        <div id="playerInfo"></div> <!-- Display player's role and opponent's role -->
+        <div id="winner"></div>
+        <table> 
+            <tr>
+                <td class="td1 cell" id="cell1" onclick="placemarker(this)"></td>
+                <td class="td2 cell" id="cell2" onclick="placemarker(this)"></td>
+                <td class="td3 cell" id="cell3" onclick="placemarker(this)"></td>
+            </tr>
+            <tr>
+                <td class="td4 cell" id="cell4" onclick="placemarker(this)"></td>
+                <td class="td5 cell" id="cell5" onclick="placemarker(this)"></td>
+                <td class="td6 cell" id="cell6" onclick="placemarker(this)"></td>
+            </tr>
+            <tr>
+                <td class="td7 cell" id="cell7" onclick="placemarker(this)"></td>
+                <td class="td8 cell" id="cell8" onclick="placemarker(this)"></td>
+                <td class="td9 cell" id="cell9" onclick="placemarker(this)"></td>
+            </tr>
+        </table>
+    </div>
+
+<script src="main.js"></script>
+</body>
+</html>
